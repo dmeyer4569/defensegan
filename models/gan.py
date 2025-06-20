@@ -15,13 +15,13 @@
 
 """Contains the GAN implementations of the abstract model class."""
 
-import cPickle
+import pickle as cPickle
 import os
 import time
 
 import numpy as np
 import tensorflow as tf
-from tensorflow.contrib import slim
+import tf_slim as slim
 
 import tflib
 import tflib.cifar10
