@@ -3,7 +3,10 @@ Image grid saver, based on color_grid_vis from github.com/Newmu
 """
 
 import numpy as np
-from scipy.misc import imsave
+
+
+# from scipy.misc import imsave ///Deprecated 
+import imageio
 
 def save_images(X, save_path):
     # [0, 1] -> [0,255]
@@ -36,4 +39,4 @@ def save_images(X, save_path):
         i = n%nw
         img[j*h:j*h+h, i*w:i*w+w] = x
 
-    imsave(save_path, img)
+    imageio(save_path, img)
